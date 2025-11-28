@@ -15,7 +15,7 @@ class GameOverActivity : AppCompatActivity() {
 
         val finalScore = intent.getIntExtra("SCORE", 0)
         val finalScoreTextView = findViewById<TextView>(R.id.finalScoreTextView)
-        finalScoreTextView.text = "Din poäng: $finalScore"
+        finalScoreTextView.text = finalScore.toString()
 
         val sharedPreferences = getSharedPreferences("GuessCard", Context.MODE_PRIVATE)
         val bestScore = sharedPreferences.getInt("BEST_SCORE", 0)
@@ -25,7 +25,7 @@ class GameOverActivity : AppCompatActivity() {
         }
 
         val bestScoreTextView = findViewById<TextView>(R.id.bestScoreTextView)
-        bestScoreTextView.text = "Bästa poäng: ${sharedPreferences.getInt("BEST_SCORE", 0)}"
+        bestScoreTextView.text = sharedPreferences.getInt("BEST_SCORE", 0).toString()
 
         val playAgainButton = findViewById<Button>(R.id.playAgainButton)
         playAgainButton.setOnClickListener {
