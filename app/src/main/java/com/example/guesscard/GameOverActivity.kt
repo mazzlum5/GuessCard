@@ -18,14 +18,15 @@ class GameOverActivity : AppCompatActivity() {
         finalScoreTextView.text = finalScore.toString()
 
         val sharedPreferences = getSharedPreferences("GuessCard", Context.MODE_PRIVATE)
-        val bestScore = sharedPreferences.getInt("BEST_SCORE", 0)
+        var bestScore = sharedPreferences.getInt("BEST_SCORE", 0)
 
         if (finalScore > bestScore) {
             sharedPreferences.edit().putInt("BEST_SCORE", finalScore).apply()
+            bestScore = finalScore
         }
 
         val bestScoreTextView = findViewById<TextView>(R.id.bestScoreTextView)
-        bestScoreTextView.text = sharedPreferences.getInt("BEST_SCORE", 0).toString()
+        bestScoreTextView.text = bestScore.toString()
 
         val playAgainButton = findViewById<Button>(R.id.playAgainButton)
         playAgainButton.setOnClickListener {
