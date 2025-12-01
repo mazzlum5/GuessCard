@@ -33,7 +33,7 @@ class GameActivity : AppCompatActivity() {
 
         higherButton.setOnClickListener { guess(isHigher = true) }
         lowerButton.setOnClickListener { guess(isHigher = false) }
-        updateScore() // Set initial score text
+        updateScore()
     }
 
     private fun createDeck() {
@@ -85,7 +85,7 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun updateScore() {
-        scoreTextView.text = "Poäng: $score"
+        scoreTextView.text = getString(R.string.score_label, score)
     }
 
     private fun gameOver() {
