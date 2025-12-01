@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">GuessCard</string>
+
+    <!-- Main Activity -->
+    <string name="main_title">Higher or Lower</string>
+    <string name="start_game">Start Game</string>
+    <string name="timed_mode">Timed Mode</string>
+    <string name="high_score">Highscore</string>
+    <string name="rules">Rules</string>
+
+    <!-- Game Activity -->
+    <string name="higher">HIGHER</string>
+    <string name="lower">LOWER</string>
+    <string name="score_label">Score: %1$d</string>
+    <string name="card_image_description">Image of the current card</string>
+
+    <!-- Game Over Activity -->
+    <string name="game_over">GAME OVER</string>
+    <string name="final_score">Final Score</string>
+    <string name="best_score">Best Score</string>
+    <string name="play_again">Play Again</string>
+    <string name="menu">Menu</string>
+
+    <!-- Rules Activity -->
+    <string name="rules_title">Rules</string>
+    <string name="rules_text">The goal is simple: guess if the next card drawn from a standard 52-card deck will be higher or lower than the one you see. Ace is the lowest (1) and King is the highest (13). Guessing the same value counts as incorrect.</string>
+    <string name="back">Back</string>
+
+    <!-- Highscore Activity -->
+    <string name="best_score_label">Best Score</string>
+    <string name="timed_highscore_label">Timed Highscore</string>
+
 </resources>
