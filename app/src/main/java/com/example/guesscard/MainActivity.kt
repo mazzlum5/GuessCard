@@ -22,6 +22,14 @@ class MainActivity : AppCompatActivity() {
         val startGameButton = findViewById<Button>(R.id.startGameButton)
         startGameButton.setOnClickListener {
             val intent = Intent(this, GameActivity::class.java)
+            intent.putExtra("TIMED_MODE", false)
+            startActivity(intent)
+        }
+
+        val timedModeButton = findViewById<Button>(R.id.timedModeButton)
+        timedModeButton.setOnClickListener {
+            val intent = Intent(this, GameActivity::class.java)
+            intent.putExtra("TIMED_MODE", true)
             startActivity(intent)
         }
 
