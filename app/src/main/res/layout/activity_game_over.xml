@@ -9,7 +9,7 @@
         android:id="@+id/gameOverTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GAME OVER"
+        android:text="@string/game_over"
         android:textColor="#FF0000"
         android:textSize="50sp"
         android:textStyle="bold"
@@ -20,11 +20,11 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/slutpoängTextView"
+        android:id="@+id/finalScoreLabelTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Final Score"
+        android:text="@string/final_score"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,14 +40,14 @@
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/slutpoängTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/finalScoreLabelTextView" />
 
     <TextView
-        android:id="@+id/bästaPoängTextView"
+        android:id="@+id/bestScoreLabelTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Best Score"
+        android:text="@string/best_score"
         android:textColor="#FFEB3B"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +63,7 @@
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bästaPoängTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/bestScoreLabelTextView" />
 
     <Button
         android:id="@+id/playAgainButton"
@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:backgroundTint="#304FFE"
-        android:text="Play Again"
+        android:text="@string/play_again"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/menuButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:backgroundTint="#616161"
-        android:text="Menu"
+        android:text="@string/menu"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
