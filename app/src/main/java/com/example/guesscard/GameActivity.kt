@@ -89,6 +89,12 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun gameOver() {
+        val sharedPreferences = getSharedPreferences("game_stats", MODE_PRIVATE)
+        val highScore = sharedPreferences.getInt("high_score", 0)
+        if (score > highScore) {
+            sharedPreferences.edit().putInt("high_score", score).apply()
+        }
+
         val intent = Intent(this, GameOverActivity::class.java)
         intent.putExtra("SCORE", score)
         startActivity(intent)

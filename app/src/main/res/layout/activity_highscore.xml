@@ -6,11 +6,11 @@
     android:background="#000000">
 
     <TextView
-        android:id="@+id/highscoreTitleTextView"
+        android:id="@+id/high_scoreTitleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="@string/highscore"
+        android:text="@string/high_score"
         android:textColor="@android:color/white"
         android:textSize="34sp"
         android:textStyle="bold"
