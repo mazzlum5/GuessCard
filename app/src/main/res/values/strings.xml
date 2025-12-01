@@ -4,7 +4,8 @@
     <!-- Main Activity -->
     <string name="main_title">Higher or Lower</string>
     <string name="start_game">Start Game</string>
-    <string name="highscore">Highscore</string>
+    <string name="timed_mode">Timed Mode</string>
+    <string name="high_score">Highscore</string>
     <string name="rules">Rules</string>
 
     <!-- Game Activity -->
@@ -27,5 +28,6 @@
 
     <!-- Highscore Activity -->
     <string name="best_score_label">Best Score</string>
+    <string name="timed_highscore_label">Timed Highscore</string>
 
 </resources>
