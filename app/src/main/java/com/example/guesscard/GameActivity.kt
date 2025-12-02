@@ -126,16 +126,18 @@ class GameActivity : AppCompatActivity() {
 
         if (score > highScore) {
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("New High Score!")
-            builder.setMessage("Please enter your name:")
+            builder.setTitle(getString(R.string.new_highscore_title))
+            builder.setMessage(getString(R.string.enter_name_message))
             val input = EditText(this)
             builder.setView(input)
             builder.setPositiveButton(android.R.string.ok) { dialog, which ->
                 val playerName = input.text.toString()
-                sharedPreferences.edit()
-                    .putInt(highscoreKey, score)
-                    .putString(highscoreNameKey, playerName)
-                    .apply()
+                if (playerName.isNotBlank()) {
+                    sharedPreferences.edit()
+                        .putInt(highscoreKey, score)
+                        .putString(highscoreNameKey, playerName)
+                        .apply()
+                }
                 goToGameOverScreen()
             }
             builder.setCancelable(false)

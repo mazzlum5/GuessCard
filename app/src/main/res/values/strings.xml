@@ -13,6 +13,8 @@
     <string name="lower">LOWER</string>
     <string name="score_label">Score: %1$d</string>
     <string name="card_image_description">Image of the current card</string>
+    <string name="new_highscore_title">New High Score!</string>
+    <string name="enter_name_message">Please enter your name:</string>
 
     <!-- Game Over Activity -->
     <string name="game_over">GAME OVER</string>
@@ -29,5 +31,6 @@
     <!-- Highscore Activity -->
     <string name="best_score_label">Best Score</string>
     <string name="timed_highscore_label">Timed Highscore</string>
+    <string name="highscore_format">%1$s: %2$d</string>
 
 </resources>
