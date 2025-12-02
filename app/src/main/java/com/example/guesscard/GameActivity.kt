@@ -8,6 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.util.concurrent.TimeUnit
+import android.app.AlertDialog
+import android.widget.EditText
 
 class GameActivity : AppCompatActivity() {
 
@@ -119,11 +121,31 @@ class GameActivity : AppCompatActivity() {
         timer?.cancel()
         val sharedPreferences = getSharedPreferences("game_stats", MODE_PRIVATE)
         val highscoreKey = if (isTimedMode) "timed_highscore" else "high_score"
+        val highscoreNameKey = if (isTimedMode) "timed_highscore_name" else "highscore_name"
         val highScore = sharedPreferences.getInt(highscoreKey, 0)
-        if (score > highScore) {
-            sharedPreferences.edit().putInt(highscoreKey, score).apply()
-        }
 
+        if (score > highScore) {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("New High Score!")
+            builder.setMessage("Please enter your name:")
+            val input = EditText(this)
+            builder.setView(input)
+            builder.setPositiveButton(android.R.string.ok) { dialog, which ->
+                val playerName = input.text.toString()
+                sharedPreferences.edit()
+                    .putInt(highscoreKey, score)
+                    .putString(highscoreNameKey, playerName)
+                    .apply()
+                goToGameOverScreen()
+            }
+            builder.setCancelable(false)
+            builder.show()
+        } else {
+            goToGameOverScreen()
+        }
+    }
+
+    private fun goToGameOverScreen() {
         val intent = Intent(this, GameOverActivity::class.java)
         intent.putExtra("SCORE", score)
         startActivity(intent)

@@ -14,13 +14,21 @@ class HighscoreActivity : AppCompatActivity() {
 
         // Regular Highscore
         val bestScore = sharedPreferences.getInt("high_score", 0)
+        var bestScoreName = sharedPreferences.getString("highscore_name", "Player")
+        if (bestScoreName.isNullOrBlank()) {
+            bestScoreName = "Player"
+        }
         val bestScoreTextView = findViewById<TextView>(R.id.bestScoreValueTextView)
-        bestScoreTextView.text = bestScore.toString()
+        bestScoreTextView.text = "$bestScoreName: $bestScore"
 
         // Timed Mode Highscore
         val timedHighscore = sharedPreferences.getInt("timed_highscore", 0)
+        var timedHighscoreName = sharedPreferences.getString("timed_highscore_name", "Player")
+        if (timedHighscoreName.isNullOrBlank()) {
+            timedHighscoreName = "Player"
+        }
         val timedHighscoreTextView = findViewById<TextView>(R.id.timedHighscoreValueTextView)
-        timedHighscoreTextView.text = timedHighscore.toString()
+        timedHighscoreTextView.text = "$timedHighscoreName: $timedHighscore"
 
         val backButton = findViewById<Button>(R.id.backButton)
         backButton.setOnClickListener {
