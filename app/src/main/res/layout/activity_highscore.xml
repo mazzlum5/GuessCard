@@ -6,7 +6,7 @@
     android:background="#000000">
 
     <TextView
-        android:id="@+id/highscoreTitleTextView"
+        android:id="@+id/highScoreTitleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
@@ -29,13 +29,14 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/highscoreTitleTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/highScoreTitleTextView" />
 
     <TextView
         android:id="@+id/bestScoreValueTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:gravity="center"
         android:textColor="@android:color/white"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,11 +44,11 @@
         app:layout_constraintTop_toBottomOf="@+id/bestScoreLabelTextView" />
 
     <TextView
-        android:id="@+id/timedHighscoreLabelTextView"
+        android:id="@+id/timedHighScoreLabelTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/timed_highscore_label"
+        android:text="@string/timed_highScore_label"
         android:textColor="#FFC107"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -56,15 +57,16 @@
         app:layout_constraintTop_toBottomOf="@+id/bestScoreValueTextView" />
 
     <TextView
-        android:id="@+id/timedHighscoreValueTextView"
+        android:id="@+id/timedHighScoreValueTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:gravity="center"
         android:textColor="@android:color/white"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timedHighscoreLabelTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/timedHighScoreLabelTextView" />
 
     <Button
         android:id="@+id/backButton"

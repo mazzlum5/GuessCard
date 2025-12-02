@@ -1,11 +1,11 @@
 package com.example.guesscard
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.edit
 
 class GameOverActivity : AppCompatActivity() {
 
@@ -17,11 +17,11 @@ class GameOverActivity : AppCompatActivity() {
         val finalScoreTextView = findViewById<TextView>(R.id.finalScoreTextView)
         finalScoreTextView.text = finalScore.toString()
 
-        val sharedPreferences = getSharedPreferences("GuessCard", Context.MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("GuessCard", MODE_PRIVATE)
         var bestScore = sharedPreferences.getInt("BEST_SCORE", 0)
 
         if (finalScore > bestScore) {
-            sharedPreferences.edit().putInt("BEST_SCORE", finalScore).apply()
+            sharedPreferences.edit { putInt("BEST_SCORE", finalScore) }
             bestScore = finalScore
         }
 
