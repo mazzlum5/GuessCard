@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/timed_highscore_label"
+        android:text="@string/timed_HighScore_label"
         android:textColor="#FFC107"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -56,7 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/bestScoreValueTextView" />
 
     <TextView
-        android:id="@+id/timedHighscoreValueTextView"
+        android:id="@+id/timedHighScoreValueTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
