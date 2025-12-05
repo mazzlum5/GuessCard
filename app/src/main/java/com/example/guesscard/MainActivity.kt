@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val highscoreButton = findViewById<Button>(R.id.highscoreButton)
+        val highscoreButton = findViewById<Button>(R.id.HighScoreButton)
         highscoreButton.setOnClickListener {
             val intent = Intent(this, HighscoreActivity::class.java)
             startActivity(intent)
